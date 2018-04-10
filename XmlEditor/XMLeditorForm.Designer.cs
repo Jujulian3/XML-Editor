@@ -34,13 +34,20 @@
             this.txtSelectXML = new System.Windows.Forms.TextBox();
             this.lblSelectXML = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnReplace = new System.Windows.Forms.Button();
-            this.btnSelectElements = new System.Windows.Forms.Button();
+            this.btnServReplace = new System.Windows.Forms.Button();
+            this.btnAddOffset = new System.Windows.Forms.Button();
+            this.btnEditDiag = new System.Windows.Forms.Button();
             this.txtLoadXML = new System.Windows.Forms.TextBox();
+            this.btnAddReplace = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnViewService = new System.Windows.Forms.Button();
+            this.btnViewAll = new System.Windows.Forms.Button();
+            this.btnViewAddServ = new System.Windows.Forms.Button();
+            this.btnViewAddress = new System.Windows.Forms.Button();
+            this.btnViewDriagrama = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -51,34 +58,34 @@
             this.groupBox1.Controls.Add(this.lblSelectXML);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(656, 93);
+            this.groupBox1.Size = new System.Drawing.Size(656, 79);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arquivo XML";
             // 
             // btnLoadXML
             // 
-            this.btnLoadXML.Location = new System.Drawing.Point(287, 59);
+            this.btnLoadXML.Location = new System.Drawing.Point(292, 48);
             this.btnLoadXML.Name = "btnLoadXML";
             this.btnLoadXML.Size = new System.Drawing.Size(95, 23);
-            this.btnLoadXML.TabIndex = 2;
+            this.btnLoadXML.TabIndex = 3;
             this.btnLoadXML.Text = "Carregar XML";
             this.btnLoadXML.UseVisualStyleBackColor = true;
             this.btnLoadXML.Click += new System.EventHandler(this.btnLoadXML_Click);
             // 
             // btnSelectXML
             // 
-            this.btnSelectXML.Location = new System.Drawing.Point(564, 26);
+            this.btnSelectXML.Location = new System.Drawing.Point(564, 17);
             this.btnSelectXML.Name = "btnSelectXML";
             this.btnSelectXML.Size = new System.Drawing.Size(75, 23);
-            this.btnSelectXML.TabIndex = 1;
+            this.btnSelectXML.TabIndex = 2;
             this.btnSelectXML.Text = "selecionar";
             this.btnSelectXML.UseVisualStyleBackColor = true;
             this.btnSelectXML.Click += new System.EventHandler(this.btnSelectXML_Click);
             // 
             // txtSelectXML
             // 
-            this.txtSelectXML.Location = new System.Drawing.Point(122, 28);
+            this.txtSelectXML.Location = new System.Drawing.Point(122, 19);
             this.txtSelectXML.Name = "txtSelectXML";
             this.txtSelectXML.Size = new System.Drawing.Size(436, 20);
             this.txtSelectXML.TabIndex = 1;
@@ -87,7 +94,7 @@
             // 
             this.lblSelectXML.AutoSize = true;
             this.lblSelectXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectXML.Location = new System.Drawing.Point(16, 31);
+            this.lblSelectXML.Location = new System.Drawing.Point(16, 22);
             this.lblSelectXML.Name = "lblSelectXML";
             this.lblSelectXML.Size = new System.Drawing.Size(100, 13);
             this.lblSelectXML.TabIndex = 1;
@@ -95,70 +102,129 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.btnReplace);
-            this.groupBox2.Controls.Add(this.btnSelectElements);
+            this.groupBox2.Controls.Add(this.btnAddReplace);
+            this.groupBox2.Controls.Add(this.btnServReplace);
+            this.groupBox2.Controls.Add(this.btnAddOffset);
+            this.groupBox2.Controls.Add(this.btnEditDiag);
             this.groupBox2.Controls.Add(this.txtLoadXML);
-            this.groupBox2.Location = new System.Drawing.Point(12, 123);
+            this.groupBox2.Location = new System.Drawing.Point(12, 173);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(656, 526);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Funcionalidades";
             // 
-            // button5
+            // btnServReplace
             // 
-            this.button5.Location = new System.Drawing.Point(513, 34);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Selecionar elementos";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnServReplace.Location = new System.Drawing.Point(502, 19);
+            this.btnServReplace.Name = "btnServReplace";
+            this.btnServReplace.Size = new System.Drawing.Size(135, 20);
+            this.btnServReplace.TabIndex = 12;
+            this.btnServReplace.Text = "Redefinir <Service>";
+            this.btnServReplace.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnAddOffset
             // 
-            this.button6.Location = new System.Drawing.Point(349, 34);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Selecionar elementos";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnAddOffset.Location = new System.Drawing.Point(180, 19);
+            this.btnAddOffset.Name = "btnAddOffset";
+            this.btnAddOffset.Size = new System.Drawing.Size(135, 20);
+            this.btnAddOffset.TabIndex = 10;
+            this.btnAddOffset.Text = "Incrementar <Address>";
+            this.btnAddOffset.UseVisualStyleBackColor = true;
             // 
-            // btnReplace
+            // btnEditDiag
             // 
-            this.btnReplace.Location = new System.Drawing.Point(185, 34);
-            this.btnReplace.Name = "btnReplace";
-            this.btnReplace.Size = new System.Drawing.Size(123, 23);
-            this.btnReplace.TabIndex = 4;
-            this.btnReplace.Text = "Alterar ";
-            this.btnReplace.UseVisualStyleBackColor = true;
-            this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
-            // 
-            // btnSelectElements
-            // 
-            this.btnSelectElements.Location = new System.Drawing.Point(21, 34);
-            this.btnSelectElements.Name = "btnSelectElements";
-            this.btnSelectElements.Size = new System.Drawing.Size(123, 23);
-            this.btnSelectElements.TabIndex = 3;
-            this.btnSelectElements.Text = "Selecionar elementos";
-            this.btnSelectElements.UseVisualStyleBackColor = true;
-            this.btnSelectElements.Click += new System.EventHandler(this.btnSelectElements_Click);
+            this.btnEditDiag.Location = new System.Drawing.Point(19, 19);
+            this.btnEditDiag.Name = "btnEditDiag";
+            this.btnEditDiag.Size = new System.Drawing.Size(135, 20);
+            this.btnEditDiag.TabIndex = 9;
+            this.btnEditDiag.Text = "Editar <Diagrama>";
+            this.btnEditDiag.UseVisualStyleBackColor = true;
+            this.btnEditDiag.Enabled = false;
             // 
             // txtLoadXML
             // 
-            this.txtLoadXML.Location = new System.Drawing.Point(19, 77);
+            this.txtLoadXML.Location = new System.Drawing.Point(19, 47);
             this.txtLoadXML.Multiline = true;
             this.txtLoadXML.Name = "txtLoadXML";
             this.txtLoadXML.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLoadXML.Size = new System.Drawing.Size(620, 424);
-            this.txtLoadXML.TabIndex = 3;
+            this.txtLoadXML.Size = new System.Drawing.Size(620, 469);
+            this.txtLoadXML.TabIndex = 14;
+            // 
+            // btnAddReplace
+            // 
+            this.btnAddReplace.Location = new System.Drawing.Point(341, 19);
+            this.btnAddReplace.Name = "btnAddReplace";
+            this.btnAddReplace.Size = new System.Drawing.Size(135, 20);
+            this.btnAddReplace.TabIndex = 11;
+            this.btnAddReplace.Text = "Redefinir <Address>";
+            this.btnAddReplace.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnViewService);
+            this.groupBox3.Controls.Add(this.btnViewDriagrama);
+            this.groupBox3.Controls.Add(this.btnViewAll);
+            this.groupBox3.Controls.Add(this.btnViewAddress);
+            this.groupBox3.Controls.Add(this.btnViewAddServ);
+            this.groupBox3.Location = new System.Drawing.Point(12, 97);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(656, 70);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Visualização XML";
+            // 
+            // btnViewService
+            // 
+            this.btnViewService.Location = new System.Drawing.Point(279, 21);
+            this.btnViewService.Name = "btnViewService";
+            this.btnViewService.Size = new System.Drawing.Size(100, 35);
+            this.btnViewService.TabIndex = 6;
+            this.btnViewService.Text = "Selecionar <Services>";
+            this.btnViewService.UseVisualStyleBackColor = true;
+            // 
+            // btnViewAll
+            // 
+            this.btnViewAll.Location = new System.Drawing.Point(539, 21);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(100, 35);
+            this.btnViewAll.TabIndex = 8;
+            this.btnViewAll.Text = "Exibir todo o documento";
+            this.btnViewAll.UseVisualStyleBackColor = true;
+            // 
+            // btnViewAddServ
+            // 
+            this.btnViewAddServ.Location = new System.Drawing.Point(409, 21);
+            this.btnViewAddServ.Name = "btnViewAddServ";
+            this.btnViewAddServ.Size = new System.Drawing.Size(100, 35);
+            this.btnViewAddServ.TabIndex = 7;
+            this.btnViewAddServ.Text = "<Address> e <Services>";
+            this.btnViewAddServ.UseVisualStyleBackColor = true;
+            // 
+            // btnViewAddress
+            // 
+            this.btnViewAddress.Location = new System.Drawing.Point(149, 21);
+            this.btnViewAddress.Name = "btnViewAddress";
+            this.btnViewAddress.Size = new System.Drawing.Size(100, 35);
+            this.btnViewAddress.TabIndex = 5;
+            this.btnViewAddress.Text = "Selecionar <Address>";
+            this.btnViewAddress.UseVisualStyleBackColor = true;
+            // 
+            // btnViewDriagrama
+            // 
+            this.btnViewDriagrama.Location = new System.Drawing.Point(19, 21);
+            this.btnViewDriagrama.Name = "btnViewDriagrama";
+            this.btnViewDriagrama.Size = new System.Drawing.Size(100, 35);
+            this.btnViewDriagrama.TabIndex = 4;
+            this.btnViewDriagrama.Text = "Selecionar <Diagrama>";
+            this.btnViewDriagrama.UseVisualStyleBackColor = true;
             // 
             // XMLeditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 661);
+            this.ClientSize = new System.Drawing.Size(684, 711);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "XMLeditorForm";
@@ -168,6 +234,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -180,11 +247,17 @@
         private System.Windows.Forms.Button btnSelectXML;
         private System.Windows.Forms.Button btnLoadXML;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnReplace;
-        private System.Windows.Forms.Button btnSelectElements;
+        private System.Windows.Forms.Button btnServReplace;
+        private System.Windows.Forms.Button btnAddOffset;
+        private System.Windows.Forms.Button btnEditDiag;
         private System.Windows.Forms.TextBox txtLoadXML;
+        private System.Windows.Forms.Button btnAddReplace;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnViewService;
+        private System.Windows.Forms.Button btnViewDriagrama;
+        private System.Windows.Forms.Button btnViewAll;
+        private System.Windows.Forms.Button btnViewAddress;
+        private System.Windows.Forms.Button btnViewAddServ;
     }
 }
 

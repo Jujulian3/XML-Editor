@@ -18,6 +18,10 @@ namespace XmlEditor
         private int idActual;
         private int offset;
         private int idInitial;
+        private int idReplace;
+
+        //PARA O ATRIBUTO 'ADDRESS' precisa de um offset para incrementar e um idInicial para "incrementar a partir desse id"
+        //PARA O ATRIBUTO 'SERVICE' precisa renomear o 3o atibuto
 
         public XMLeditorForm()
         {
